@@ -7,7 +7,7 @@ public class Orden {
 
     private final int idOrden;
     private final Producto productos[];
-    private Calendar fechaCreacion = Calendar.getInstance();
+    private final Calendar fechaCreacion = Calendar.getInstance();
     private Cliente cliente;
     private static int contadorOrdenes;
     private int contadorProductos;
@@ -54,7 +54,7 @@ public class Orden {
         }
 
         System.out.println("=========================================================");
-        System.out.println("| ITEM\tCÓD.\tCANT.\tDESCRIPCIÓN\tPRECIO\tSUBTOTAL");
+        System.out.println("| ITEM\tCÓDIGO\tCANT.\tDESCRIPCIÓN\tPRECIO\tSUBTOTAL");
        
         for (int i = 0; i < this.contadorProductos; i++) {
             int item = i + 1;
