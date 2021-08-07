@@ -12,7 +12,6 @@ public class Orden {
     private static int contadorOrdenes;
     private int contadorProductos;
     private final static int MAX_PRODUCTOS = 10;
-    private int item;
 
     public Orden() {
         this.idOrden = ++Orden.contadorOrdenes; // INCREMENTO DEL CONTADOR
@@ -49,20 +48,23 @@ public class Orden {
         System.out.println("| CLIENTE: " + this.cliente.getNombre());
         System.out.println("| DIRECCIÓN: " + this.cliente.getDireccion());
         System.out.println("| TELÉFONO: " + this.cliente.getTelefono());
+
         if (!this.cliente.mostrarRepresentante().equals("")) {
-            System.out.println("| REPRESENTANTE: " + this.cliente.mostrarRepresentante());
+            System.out.println("| REPRESENTANTE: " + this.cliente.mostrarRepresentante()); // SI EL REPRESENTANTE ESTÁ VACÍO NO SE MUESTRA
         }
+
         System.out.println("=========================================================");
         System.out.println("| ITEM\tCÓD.\tCANT.\tDESCRIPCIÓN\tPRECIO\tSUBTOTAL");
+       
         for (int i = 0; i < this.contadorProductos; i++) {
-            item = i + 1;
+            int item = i + 1;
             System.out.print("| #" + item);
             System.out.println(this.productos[i]);
         }
         double totalOrden = this.calcularTotal();
         System.out.println("=========================================================");
         DecimalFormat df = new DecimalFormat("###.##"); // REDONDEA A 2 DECIMALES
-        System.out.println("| SUBTOTAL:\t\t\t\t\t$" + df.format(totalOrden)); // CALCULANDO EL IVA
+        System.out.println("| SUBTOTAL:\t\t\t\t\t$" + df.format(totalOrden));
         System.out.println("| I.V.A:\t\t\t\t\t$" + df.format((totalOrden * 1.13) - totalOrden)); // CALCULANDO EL IVA
         System.out.println("| MONTO TOTAL:\t\t\t\t\t$" + df.format(totalOrden * 1.13));
         System.out.println("=========================================================");

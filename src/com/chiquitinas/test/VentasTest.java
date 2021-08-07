@@ -19,15 +19,15 @@ public class VentasTest {
 
         Orden orden1 = new Orden();
         orden1.agregarProducto(producto1);
-        orden1.agregarProducto(producto2);
+        orden1.agregarProducto(producto5);
         orden1.agregarCliente(cliente1);
         orden1.imprimirOrden();
 
         Orden orden2 = new Orden();
+        orden2.agregarCliente(cliente2);
         orden2.agregarProducto(producto3);
         orden2.agregarProducto(producto4);
-        orden2.agregarCliente(cliente2);
-        orden2.agregarProducto(producto5);
+        orden2.agregarProducto(producto1);
         orden2.imprimirOrden();
     }
 }
