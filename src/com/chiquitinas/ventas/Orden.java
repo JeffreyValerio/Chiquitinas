@@ -55,7 +55,7 @@ public class Orden {
 
         System.out.println("=========================================================");
         System.out.println("| ITEM\tCÓDIGO\tCANT.\tDESCRIPCIÓN\tPRECIO\tSUBTOTAL");
-       
+
         for (int i = 0; i < this.contadorProductos; i++) {
             int item = i + 1;
             System.out.print("| #" + item);
