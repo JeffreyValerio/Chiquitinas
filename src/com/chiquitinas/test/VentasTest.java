@@ -13,8 +13,9 @@ public class VentasTest {
         Cliente cliente2 = new Juridico("Jeffrey", "Mariela", 60265671, "Guadalupe");
         Producto producto1 = new Producto("CAMISA 1", 100, 1);
         Producto producto2 = new Producto("CAMISA 2", 50, 2);
-        Producto producto3 = new Producto("TELEVISOR", 113, 4);
-        Producto producto4 = new Producto("FREIDORA", 89, 3);
+        Producto producto3 = new Producto("TELEVISOR", 113, 1);
+        Producto producto4 = new Producto("FREIDORA", 89, 1);
+        Producto producto5 = new Producto("PLANCHA ", 23, 2);
 
         Orden orden1 = new Orden();
         orden1.agregarProducto(producto1);
@@ -26,6 +27,7 @@ public class VentasTest {
         orden2.agregarProducto(producto3);
         orden2.agregarProducto(producto4);
         orden2.agregarCliente(cliente2);
+        orden2.agregarProducto(producto5);
         orden2.imprimirOrden();
     }
 }

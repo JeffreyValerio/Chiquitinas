@@ -64,7 +64,7 @@ public class Producto {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("| #").append(idProducto);
+        sb.append("\tC102").append(idProducto);
         sb.append("\t").append(cantidadProductos);
         sb.append("\t").append(nombre);
         sb.append("\t$").append(precio);
