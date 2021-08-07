@@ -42,15 +42,15 @@ public class Orden {
     public void imprimirOrden() {
         System.out.println("*********************CHIQUITINAS S.A*********************");
         System.out.println("=========================================================");
-        System.out.println("| ORDEN #" + this.idOrden);
-        System.out.println("| FECHA: " + this.fechaCreacion.getTime());
-        System.out.println("| ID CLIENTE: " + this.cliente.getIdCliente());
-        System.out.println("| CLIENTE: " + this.cliente.getNombre());
-        System.out.println("| DIRECCIÓN: " + this.cliente.getDireccion());
-        System.out.println("| TELÉFONO: " + this.cliente.getTelefono());
+        System.out.println("| ORDEN \t\t#" + this.idOrden);
+        System.out.println("| FECHA: \t\t" + this.fechaCreacion.getTime());
+        System.out.println("| ID CLIENTE: \t\t" + this.cliente.getIdCliente());
+        System.out.println("| CLIENTE: \t\t" + this.cliente.getNombre());
+        System.out.println("| DIRECCIÓN: \t\t" + this.cliente.getDireccion());
+        System.out.println("| TELÉFONO: \t\t" + this.cliente.getTelefono());
 
         if (!this.cliente.mostrarRepresentante().equals("")) {
-            System.out.println("| REPRESENTANTE: " + this.cliente.mostrarRepresentante()); // SI EL REPRESENTANTE ESTÁ VACÍO NO SE MUESTRA
+            System.out.println("| REPRESENTANTE: \t" + this.cliente.mostrarRepresentante()); // SI EL REPRESENTANTE ESTÁ VACÍO NO SE MUESTRA
         }
 
         System.out.println("=========================================================");
